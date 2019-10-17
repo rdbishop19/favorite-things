@@ -1,16 +1,8 @@
 console.log("We can't stop here... this is BAT COUNTRY!");
+
 /* 
-
-Build two fieldsets and input fields that will allow you to 
-enter the name of a favorite thing of yours, and a location 
-where you might purchase it (Target, Amazon, Best Buy, etc...)
-
-Add a button beneath the fieldsets labeled "Save to Wishlist".
-
-When the button is clicked, display the data in the following format in the DOM.
-
-I can purchase {thing} at {location}
-
+When you click the button and the new favorite thing is added to the DOM, 
+clear out the value of both input fields. Then set the focus to the first input field.
 */
 const saveToWishlist = () => {
     // get item from fieldset
@@ -21,6 +13,14 @@ const saveToWishlist = () => {
     let sentence = `I can purchase ${wishlistItem} at ${vendorLocation}.`
     let outputHtml = document.getElementById("wishlist-output");
     outputHtml.textContent = sentence;
+
+    // clear values of both input fields
+    document.getElementById("item-name").value = "";
+    document.getElementById("item-vendor").value = "";
+    // reset focus to first input field
+    document.getElementById("item-name").focus();
 }
+
 // When save button clicked, display the data in the DOM.
 document.querySelector("#saveItem").addEventListener("click", saveToWishlist);
+
