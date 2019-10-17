@@ -1,0 +1,25 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+fieldset {
+    margin: 5px;
+    border: 1px solid #333;
+    border-radius: 3px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(2, 124, 104);
+    background-color: aquamarine;
+}
+
+#wishlist-output {
+    margin: 10px;
+    padding: 20px;
+    background-color: rgba(30, 219, 140, 0.5);
+    border-radius: 3px;
+    font-size: 1.5em;
+}
